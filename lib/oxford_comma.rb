@@ -6,10 +6,13 @@ def oxford_comma(array)
   return ...array.join(" and ")
 end
   elsif array.size == 3
-  array.splice()
+  lastEl = "and" + array[2]
+  array.pop(array[2])
+  array << lastEl
+  array.join(",")
 end  
 else
-  return array.split(",")
+  return array.join(",")
   end
 end
 
